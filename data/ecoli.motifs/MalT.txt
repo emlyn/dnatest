@@ -1,0 +1,9 @@
+ECK120008962	MalT	ECK120010996	3735057	3735066	forward	activator	cttaccgctcAGGGATGAGTtttgtttggc	4,	known
+ECK120008962	MalT	ECK120010847	3550175	3550184	reverse	activator	aatcccccgcAGGATGAGGAaggtcaacat	4,1,	known
+ECK120008962	MalT	ECK120010792	4244271	4244280	reverse	activator	atggcttaaaTCCTCCACCCcctggctttt	2,1,	known
+ECK120008962	MalT	ECK120010793	4244273	4244282	forward	activator	aagccaggggGTGGAGGATTtaagccatct	2,1,	known
+ECK120008962	MalT	ECK120010795	4244242	4244251	forward	activator	ttctcatcctCCCGCCTCCTcccccataaa	2,1,	known
+ECK120008962	MalT	ECK120010796	4244082	4244091	reverse	activator	gtggggcgtaGGGGCAAGGAggatggaaag	2,1,	known
+ECK120008962	MalT	ECK120010846	3550204	3550213	reverse	activator	ttgctcatccCCGCAACTCCtccctgccta	4,1,	known
+ECK120008962	MalT	ECK120010821	4244082	4244091	forward	activator	ctttccatccTCCTTGCCCCtacgccccac	2,1,	known
+ECK120008962	MalT	ECK120010794	4244242	4244251	reverse	activator	tttatgggggAGGAGGCGGGaggatgagaa	2,1,	known

@@ -1,0 +1,4 @@
+ECK120008938	GntR	ECK120012699	3544159	3544174	forward	repressor	tcagaaaattGACGTTACCCATAACAaatgaaaggc	2,1,	known
+ECK120008938	GntR	ECK120012700	1932601	1932616	reverse	repressor	gaatccacaaTTGTTACGCGTAACAAatcgaatcat	2,1,	known
+ECK120008938	GntR	ECK120012701	1932822	1932837	reverse	repressor	tttatggttaTTTTACCGGTAACATGatcttgcgca	2,	known
+ECK120008938	GntR	ECK120012702	3544019	3544034	forward	repressor	caaacgccagATGTTACCCGTATCATtcacatgggt	2,1,	known

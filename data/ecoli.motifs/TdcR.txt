@@ -1,0 +1,1 @@
+ECK120008937	TdcR	ECK120010965	3264926	3264937	reverse	activator	ttaaccacatAACGAATGATGTtatcgccata	4,1,	known

@@ -1,0 +1,1 @@
+ECK120008987	FecI	ECK120010655	4514280	4514286	reverse	activator	cttctcgttcGACTCATagctgaacac	2,1,	known

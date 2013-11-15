@@ -1,0 +1,4 @@
+ECK120009000	XylR	ECK120010590	3728472	3728487	reverse	activator	ctcaatagcaGTGTGAAATAACATAAttgagcaact	2,5,	known
+ECK120009000	XylR	ECK120010591	3728492	3728507	reverse	activator	agcgcacactTGTGAATTATCTCAATagcagtgtga	2,5,	known
+ECK120009000	XylR	ECK120010592	3728642	3728657	forward	activator	aaaaatcgtaATCGAAAGATAAAAATctgtaattgt	2,5,	known
+ECK120009000	XylR	ECK120010593	3728622	3728637	forward	activator	cataaatcaaGAAATAAACCAAAAATcgtaatcgaa	2,5,	known

@@ -1,0 +1,3 @@
+ECK120008981	CspA	ECK120010632	2337538	2337542	reverse	activator	agtatatcagGCATTggatgtgaat	2,	known
+ECK120008981	CspA	ECK120010672	2337567	2337571	reverse	activator	cttctactccGTAATtggcaagaca	2,	known
+ECK120008981	CspA	ECK120010673	2337587	2337591	reverse	activator	tttttcggcaTTCATtggcacttct	2,	known

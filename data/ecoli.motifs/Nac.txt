@@ -1,0 +1,9 @@
+ECK120009066	Nac	ECK120013693	2060067	2060081	reverse	activator	gacgaatctaTCATAATCTCTTATTtgacagttgg	2,4,5,	known
+ECK120009066	Nac	ECK120013699	1840368	1840382	forward	repressor	aagcacaatcGTATTAATATATAAGggttttatat	4,5,	known
+ECK120009066	Nac	ECK120013705	1840243	1840257	forward	repressor	atcgcatttgGTTATGAGATTACTCtcgttattaa	4,5,	known
+ECK120009066	Nac	ECK120013703	1840299	1840313	forward	repressor	tttcttgcttACCGTCACATTCTTGatggtatagt	4,5,	known
+ECK120009066	Nac	ECK120013701	1840348	1840362	forward	repressor	gcacatgacaTAAACAACATAAGCAcaatcgtatt	4,5,	known
+ECK120009066	Nac	ECK120013697	3924741	3924755	reverse	repressor	cctgttgcttATGATTAAGCAACAAaaaccgacac	4,5,	known
+ECK120009066	Nac	ECK120013694	3924638	3924652	reverse	repressor	aatgaatcatCAATCCGCATAAGAAaatcctatgg	4,5,	known
+ECK120009066	Nac	ECK120013695	3924684	3924698	reverse	repressor	aaagcctaacTCACTTTTGATTCATtaaaaaagaa	4,5,	known
+ECK120009066	Nac	ECK120014155	2789142	2789156	forward	activator	cggcagcgacATCAGCAATTCCTATtggtgcgcat	4,5,	known

@@ -1,0 +1,1 @@
+ECK120008960	KdpE	ECK120010865	728127	728138	reverse	activator	ccatttttatACTTTTTTTACAccccgcccgc	2,1,	known

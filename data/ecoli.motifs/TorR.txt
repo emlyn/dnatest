@@ -1,0 +1,6 @@
+ECK120008996	TorR	ECK120010966	1057195	1057204	forward	activator	ttttactcatTCTGTTCATAtctgttcata	2,4,1,	known
+ECK120008996	TorR	ECK120010555	1057196	1057205	reverse	repressor	atatgaacagATATGAACAGaatgagtaaa	2,4,5,1,	known
+ECK120008996	TorR	ECK120010556	1057206	1057215	reverse	repressor	ttacggcagaATATGAACAGatatgaacag	2,4,5,	known
+ECK120008996	TorR	ECK120010645	1057225	1057234	forward	activator	ttctgccgtaAGCCGTTCATcctgaccagt	2,4,	known
+ECK120008996	TorR	ECK120010646	1057249	1057258	forward	activator	accagtgccgCTGTTCATATttgctcatta	2,4,	known
+ECK120008996	TorR	ECK120010644	1057205	1057214	forward	activator	tctgttcataTCTGTTCATAttctgccgta	2,4,	known

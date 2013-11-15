@@ -1,0 +1,2 @@
+ECK120009041	GlcC	ECK120014162	3126261	3126275	reverse	activator	cccggacctcGTGCACAGGTAGGACcaatttttct	3,5,1,	known
+ECK120009041	GlcC	ECK120014169	3126260	3126274	forward	repressor	cagaaaaattGGTCCTACCTGTGCAcgaggtccgg	3,5,1,	known

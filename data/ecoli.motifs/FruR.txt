@@ -1,0 +1,11 @@
+ECK120008993	FruR	ECK120010617	2531566	2531579	forward	activator	aaagccaaagCTGAATCGATTTTAtgatttggtt	2,	known
+ECK120008993	FruR	ECK120010617	2531566	2531579	forward	repressor	aaagccaaagCTGAATCGATTTTAtgatttggtt	2,5,	known
+ECK120008993	FruR	ECK120012446	3491601	3491614	forward	repressor	aagcggggttGCTGAATCGTTAAGgtaggcggta	3,4,5,	known
+ECK120008993	FruR	ECK120011004	1297595	1297608	reverse	repressor	gaaaagcgatGCTGAAAGGTGTCAgctttgcaaa	2,4,	known
+ECK120008993	FruR	ECK120012062	3769786	3769799	forward	repressor	cgactggacaGTTAACCGATTCAGtgccagattt	2,4,5,1,	known
+ECK120008993	FruR	ECK120012060	3071834	3071847	reverse	repressor	cttatcctagCTGAAGCGTTTCAGtcgattaaat	2,4,5,1,	known
+ECK120008993	FruR	ECK120012134	3530171	3530184	forward	activator	agttagcgtgGTGAATCGATACTTtaccggttga	2,4,5,1,	known
+ECK120008993	FruR	ECK120010580	1753502	1753515	forward	repressor	caattgactcTTGAATGGTTTCAGcactttggac	4,1,	known
+ECK120008993	FruR	ECK120012058	1932727	1932740	reverse	repressor	attacactgaCTGAAACGTTTTTGccctatgagc	2,4,5,1,	known
+ECK120008993	FruR	ECK120010737	1194100	1194113	forward	activator	aacgttgcgaGCTGAATCGCTTAAcctggtgatt	2,	known
+ECK120008993	FruR	ECK120012274	4105012	4105025	forward	repressor	ttggcctgacCTGAATCAATTCAGcaggaagtga	2,	known

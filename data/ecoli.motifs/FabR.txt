@@ -1,0 +1,2 @@
+ECK120013912	FabR	ECK120013914	1015732	1015749	reverse	repressor	ggacttgttcAGCGTACACGTGTTAGCTatcctgcgtg	3,5,	known
+ECK120013912	FabR	ECK120013916	2439673	2439690	reverse	repressor	ggacttgttcGGCGTACAAGTGTACGCTattgtgcatt	3,5,	known
