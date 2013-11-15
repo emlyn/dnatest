@@ -1,2 +1,0 @@
-ECK120009050	TreR	ECK120014113	4463825	4463839	reverse	repressor	gatcttcgctGCGTTTCGGGAACGTtcccgttttt	4,5,	known
-ECK120009050	TreR	ECK120014115	4463858	4463872	reverse	repressor	cctgtcctgaTCGTTTCCTGAACGAtaaattgtga	4,5,	known

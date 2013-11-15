@@ -1,2 +1,0 @@
-ECK120008954	GalS	ECK120010943	2239631	2239646	reverse	repressor	tggcgtctctGTGGCAACGGTTTCCCgggtgctcaa	4,5,	known
-ECK120008954	GalS	ECK120010942	2239784	2239799	reverse	repressor	aacaaaacggCTGTAACCGTTTCCATtgctgtgact	4,5,	known

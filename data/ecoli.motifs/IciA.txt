@@ -1,4 +1,0 @@
-ECK120009065	IciA	ECK120012673	3881640	3881652	reverse	activator	atggtcattaAATTTTCCAATATgcggcgtaaa	2,5,	known
-ECK120009065	IciA	ECK120012790	2342434	2342446	forward	activator	gcttagcattTAACAATAACCGAatagaaaaca	2,5,	known
-ECK120009065	IciA	ECK120012786	2342574	2342586	forward	activator	aaaaagattaATAAGCCATCTATatcaatttat	2,5,	known
-ECK120009065	IciA	ECK120012788	2342500	2342512	forward	activator	ttatatattgACCACAACTGATAcatcagatta	2,5,	known

@@ -1,4 +1,0 @@
-ECK120008923	MalI	ECK120010994	1697314	1697325	reverse	repressor	gcgagaagatAAAACGTTTTATcaaattttag	4,	known
-ECK120008923	MalI	ECK120010995	1697237	1697248	forward	repressor	atgtgacagaTAAAACGTTTTAccttttattt	4,	known
-ECK120008923	MalI	ECK120010674	1697236	1697247	reverse	repressor	aataaaaggtAAAACGTTTTATctgtcacata	4,	known
-ECK120008923	MalI	ECK120010701	1697316	1697327	forward	repressor	aaaatttgatAAAACGTTTTATcttctcgcgc	4,	known

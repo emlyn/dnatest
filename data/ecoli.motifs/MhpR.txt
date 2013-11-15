@@ -1,1 +1,0 @@
-ECK120009063	MhpR	ECK120014327	367677	367693	forward	activator	aaaacaacgtGGTGCACCTGGTGCACAttcgggcatg	3,4,5,	known

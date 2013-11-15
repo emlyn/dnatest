@@ -1,2 +1,0 @@
-ECK120008999	XapR	ECK120010586	2522963	2522975	reverse	activator	aatgcgtgagAAAAGTGTATTGGtaagagccgg	4,5,	known
-ECK120008999	XapR	ECK120010587	2523043	2523055	reverse	activator	ggaattaataTCGCCAATACAGTttttaccgtg	4,5,	known

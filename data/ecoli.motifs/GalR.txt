@@ -1,4 +1,0 @@
-ECK120008955	GalR	ECK120010848	791357	791373	reverse	repressor	gctaaattctTGTGTAAACGATTCCACtaatttattc	2,1,	known
-ECK120008955	GalR	ECK120010849	791254	791270	reverse	repressor	ttatgagagtTCTGGTTACCGGTGGTAgcggttacat	2,1,	known
-ECK120008955	GalR	ECK120010848	791357	791373	reverse	repressor	gctaaattctTGTGTAAACGATTCCACtaatttattc	2,1,	known
-ECK120008955	GalR	ECK120010849	791254	791270	reverse	repressor	ttatgagagtTCTGGTTACCGGTGGTAgcggttacat	2,1,	known

@@ -1,7 +1,0 @@
-ECK120008963	MetJ	ECK120014300	222728	222735	reverse	repressor	ttagacgtctGGATGCCTtaacatccat	4,5,	known
-ECK120008963	MetJ	ECK120014302	222736	222743	reverse	repressor	tgattgatttAGACGTCTggatgcctta	4,5,	known
-ECK120008963	MetJ	ECK120010886	4130142	4130149	forward	repressor	gacgtctaaaCGGATAGAtgtgcacaac	4,1,	known
-ECK120008963	MetJ	ECK120010885	4130126	4130133	forward	repressor	ttcatctttaCATCTGGAcgtctaaacg	4,1,	known
-ECK120008963	MetJ	ECK120010884	4130114	4130121	forward	repressor	ttcggcttttCCTTCATCtttacatctg	4,1,	known
-ECK120008963	MetJ	ECK120010883	4211828	4211835	forward	repressor	atgtctaaacGTATAAGCgtatgtagtg	2,4,	known
-ECK120008963	MetJ	ECK120010882	4211812	4211819	forward	repressor	atcttcagctATCTGGATgtctaaacgt	2,4,	known
