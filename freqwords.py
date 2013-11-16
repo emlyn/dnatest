@@ -28,7 +28,7 @@ def candidates(roots, distance):
 
 def go(text, k, d):
     kmers = {}
-    for i in xrange(len(text)-k):
+    for i in xrange(len(text) - k + 1):
         kmer = text[i:i+k]
         try:
             kmers[kmer] += 1
@@ -59,5 +59,4 @@ go("CACAGTAGGCGCCGGCACACACAGCCCCGGGCCCCGGGCCGCCCCGGGCCGGCGGCCGCCGGCGCCGGCA" +
    "TACCGGCACACACAGTAGCCCACACACAGGCGGGCGGTAGCCGGCGCACACACACACAGTAGGCGCACAG" +
    "CCGCCCACACACACCGGCCGGCCGGCACAGGCGGGCGGGCGCACACACACCGGCACAGTAGTAGGCGGCC" +
    "GGCGCACAGCC", 10, 2)
-# should get: GCACACAGAC GCGCACACAC
-# but get: GCACACAGAC ACACACACAC GCGCACACAC CCCGCACACA
+# GCACACAGAC GCGCACACAC
