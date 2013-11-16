@@ -6,27 +6,20 @@ def distance(k1, k2):
     "Returns the Hamming distance between two strings, assumes they are the same length"
     return sum(c1 != c2 for c1, c2 in izip(k1, k2))
 
-def kmerswithin(distance, root, alphabet="GCAT"):
-    "Returns all kmers within Hamming distance of root, might repeat some"
-    if distance < 1:
-        yield root
-    else:
-        for kmer in kmerswithin(distance - 1, root, alphabet):
-            yield kmer
+def kmerswithin(distance, roots, alphabet = "GCAT"):
+    "Returns a set of all kmers within hamming distance of any of the roots"
+    result = set(roots)
+    for i in range(distance):
+        temp = set()
+        for kmer in result:
             for i in xrange(len(kmer)):
                 pref = kmer[:i]
                 base = kmer[i]
                 suff = kmer[i+1:]
                 for c in alphabet:
-                    if c != base:
-                        yield pref + c + suff
-
-def candidates(roots, distance):
-    "Return all kmers within hamming distance of any of the roots, without repeats"
-    result = set()
-    for root in roots:
-        for kmer in kmerswithin(distance, root):
-            result.add(kmer)
+                    temp.add(pref + c + suff)
+        result = temp
+    print "Found %d candidates" % len(result)
     return result
 
 def go(text, k, d):
@@ -42,11 +35,8 @@ def go(text, k, d):
     # Find candidate kmers within specified distance of input kmers
     maxcount = 0
     maxkmers = []
-    print "Calculating candidates"
-    c = candidates(kmers.keys(), d)
-    print "Found ", len(c)
     # For each candidate kmer
-    for pattern in c:
+    for pattern in kmerswithin(d, kmers.keys()):
         count = 0
         # Check each input kmer
         for kmer, n in kmers.iteritems():
