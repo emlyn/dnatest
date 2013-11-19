@@ -1,28 +1,34 @@
-#!/usr/bin/env python
+#!/usr/bin/env pypy
 
 from itertools import izip
+from collections import defaultdict
+import string
 
 def distance(k1, k2):
     "Returns the Hamming distance between two strings, assumes they are the same length"
     return sum(c1 != c2 for c1, c2 in izip(k1, k2))
 
+translate_table = string.maketrans("GCATgcat", "CGTAcgta");
+
+def revcomp(s):
+    return ''.join(reversed(s.translate(translate_table)))
+
 def kmerswithin(distance, roots, alphabet = "GCAT"):
     "Returns a set of all kmers within hamming distance of any of the roots"
     result = set(roots)
-    for i in range(distance):
+    for _ in xrange(distance):
         temp = set()
         for kmer in result:
             for i in xrange(len(kmer)):
                 pref = kmer[:i]
-                base = kmer[i]
                 suff = kmer[i+1:]
                 for c in alphabet:
                     temp.add(pref + c + suff)
         result = temp
-    print "Found %d candidates" % len(result)
+    #print "Found %d candidates" % len(result)
     return result
 
-def go(text, k, d):
+def go(text, k, d=0):
     "Solve the problem"
     # Find counts of all kmers in input sequence
     kmers = {}
@@ -52,16 +58,58 @@ def go(text, k, d):
             maxkmers.append(pattern)
     print ' '.join(maxkmers)
 
-go("ACGTTGCATGTCGCATGATGCATGAGAGCT", 4, 1)
+def gorc(text, k, d):
+    kmers = defaultdict(int)
+    for i in xrange(len(text) - k + 1):
+        kmer = text[i:i+k]
+        for km in kmerswithin(d, [kmer]):
+            kmers[km] += 1
+            kmers[revcomp(km)] += 1
+    maxcount = 0
+    maxkmers = []
+    for k, n in kmers.iteritems():
+        if n > maxcount:
+            maxcount = n
+            maxkmers = [k]
+        elif n == maxcount:
+            maxkmers.append(k)
+    print ' '.join(maxkmers)
+
+
+def positions(pattern, genome, dist = 0):
+    result = []
+    l = len(pattern)
+    for pos in xrange(len(genome) - l + 1):
+        if distance(genome[pos:pos+l], pattern) <= dist:
+            result.append(pos)
+    return ' '.join(str(i) for i in result)
+
+## 1.1
+#go("ACGTTGCATGTCGCATGATGCATGAGAGCT", 4)
+
+## 1.2
+#print revcomp("AAAACCCGGT")
+
+##1.3
+#print positions("ATAT", "GATATATGCATATACTT")
+
+## 1.6
+
+#print positions("ATTCTGGA",
+#                "CGCCCGAATCCAGAACGCATTCCCATATTTCGGGA" +
+#                "CCACTGGCCTCCACGGTACGGACGTCAATCAAAT",
+#                3)
+
+## 1.7
+
+#go("ACGTTGCATGTCGCATGATGCATGAGAGCT", 4, 1)
 # GATG ATGC ATGT
 
-go("CACAGTAGGCGCCGGCACACACAGCCCCGGGCCCCGGGCCGCCCCGGGCCGGCGGCCGCCGGCGCCGGCA" +
-   "CACCGGCACAGCCGTACCGGCACAGTAGTACCGGCCGGCCGGCACACCGGCACACCGGGTACACACCGGG" +
-   "GCGCACACACAGGCGGGCGCCGGGCCCCGGGCCGTACCGGGCCGCCGGCGGCCCACAGGCGCCGGCACAG" +
-   "TACCGGCACACACAGTAGCCCACACACAGGCGGGCGGTAGCCGGCGCACACACACACAGTAGGCGCACAG" +
-   "CCGCCCACACACACCGGCCGGCCGGCACAGGCGGGCGGGCGCACACACACCGGCACAGTAGTAGGCGGCC" +
-   "GGCGCACAGCC", 10, 2)
-# GCACACAGAC GCGCACACAC
+## 1.8
 
-#go("GCGACAACCCACCCCCGCAGCGACCGACCCTAGACCCGCGACCGCCGTAGGCGAACCCTAGACCCCAGCGACCGCCGGCGACAACCCTAGCAGCGATAGACCCTAGCAGCGACACAGCGAGCGAACCCTAGCCGTAGTAGTAGGCGAACCCTAGTAGCACCGTAGGCGAACCCGCGACACATAGGCGACAACCCCATAGCCGGCGACCGACCCGCGACATAGCAGCGAGCGAACCCCAGCGACACAGCGAGCGATAGTAGTAGCCGCCGCCGTAGTAGCCGGCGATAGCAACCCTAGCCGTAGCCGGCGAACCCCCGGCGACACCGTAGCACCGCAACCCTAGGCGAACCCTAGACCCACCCTAGACCCACCCCCGGCGACCG", 9, 3)
-# CCCCAACCC
+#gorc("ACGTTGCATGTCGCATGATGCATGAGAGCT", 4, 1)
+gorc("TCTCTCCTTGCTTGCGCCCGCTGCCGCCCTCTCCCCTGCTGCCGCGCCCTGCCCTCTGCCCGCCGCTCCGCCTCCTGCCTGCCTGCCTTCCTGCCCTGCGCTCTCTCCCGCCCCTCCCTGCCTGCTTCCCTCCTCTCCCCGCGCTTTCTCTTCCCTTGCGCTTTCTCTCCTCTCTCTCCCGCTTCTTGCCCCTCGCCCCTCTCTCCTCTCCCCTTCT",
+     10, 2)
+
+#go("CTTGCCGGCGCCGATTATACGATCGCGGCCGCTTGCCTTCTTTATAATGCATCGGCGCCGCGATCTTGCTATATACGTACGCTTCGCTTGCATCTTGCGCGCATTACGTACTTATCGATTACTTATCTTCGATGCCGGCCGGCATATGCCGCTTTAGCATCGATCGATCGTACTTTACGCGTATAGCCGCTTCGCTTGCCGTACGCGATGCTAGCATATGCTAGCGCTAATTACTTAT",
+#   9, 3)
