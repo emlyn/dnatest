@@ -84,6 +84,49 @@ def positions(pattern, genome, dist = 0):
             result.append(pos)
     return ' '.join(str(i) for i in result)
 
+def clumps(genome, k, L, t):
+    kmers = defaultdict(list)
+    for pos in xrange(len(genome) - k + 1):
+        kmers[genome[pos:pos+k]].append(pos)
+    #print "Found %d kmers" % len(kmers)
+    results = []
+    for kmer, pos in kmers.iteritems():
+        if len(pos) < t: continue
+        #print "Checking %s: %s" % (kmer, str(pos))
+        for i, v in enumerate(pos[:-t + 1]):
+            #print i, v
+            if pos[i+t-1] - v <= L:
+                results.append(kmer)
+                break
+    return ' '.join(results)
+
+def skews(genome):
+    result = [0]
+    skew = 0
+    for c in genome:
+        if c == 'G':
+            skew += 1
+        elif c == 'C':
+            skew -= 1
+        result.append(skew)
+    return ' '.join(map(str, result))
+
+def minskews(genome):
+    minskew = 0
+    result = [0]
+    skew = 0
+    for i, c in enumerate(genome):
+        if c == 'G':
+            skew += 1
+        elif c == 'C':
+            skew -= 1
+        if skew < minskew:
+            minskew = skew
+            result = [i+1]
+        elif skew == minskew:
+            result.append(i+1)
+    return ' '.join(map(str, result))
+
 ## 1.1
 #go("ACGTTGCATGTCGCATGATGCATGAGAGCT", 4)
 
@@ -92,6 +135,15 @@ def positions(pattern, genome, dist = 0):
 
 ##1.3
 #print positions("ATAT", "GATATATGCATATACTT")
+
+## 1.4
+
+#print clumps("CGGACTCGACAGATGTGAAGAACGACAATGTGAAGACTCGACACGACAGAGTGAAGAGAAGAGGAAACATTGTAA", 5, 50, 4)
+
+## 1.5
+
+#print skews('GAGCCACCGCGATA')
+#print minskews("TAAAGACTGCCGAGAGGCCAACACGAGTGCTAGAACGAGGGGCGTAAACGCGGGTCCGAT")
 
 ## 1.6
 
@@ -108,8 +160,8 @@ def positions(pattern, genome, dist = 0):
 ## 1.8
 
 #gorc("ACGTTGCATGTCGCATGATGCATGAGAGCT", 4, 1)
-gorc("TCTCTCCTTGCTTGCGCCCGCTGCCGCCCTCTCCCCTGCTGCCGCGCCCTGCCCTCTGCCCGCCGCTCCGCCTCCTGCCTGCCTGCCTTCCTGCCCTGCGCTCTCTCCCGCCCCTCCCTGCCTGCTTCCCTCCTCTCCCCGCGCTTTCTCTTCCCTTGCGCTTTCTCTCCTCTCTCTCCCGCTTCTTGCCCCTCGCCCCTCTCTCCTCTCCCCTTCT",
-     10, 2)
+#gorc("TCTCTCCTTGCTTGCGCCCGCTGCCGCCCTCTCCCCTGCTGCCGCGCCCTGCCCTCTGCCCGCCGCTCCGCCTCCTGCCTGCCTGCCTTCCTGCCCTGCGCTCTCTCCCGCCCCTCCCTGCCTGCTTCCCTCCTCTCCCCGCGCTTTCTCTTCCCTTGCGCTTTCTCTCCTCTCTCTCCCGCTTCTTGCCCCTCGCCCCTCTCTCCTCTCCCCTTCT",
+#     10, 2)
 
 #go("CTTGCCGGCGCCGATTATACGATCGCGGCCGCTTGCCTTCTTTATAATGCATCGGCGCCGCGATCTTGCTATATACGTACGCTTCGCTTGCATCTTGCGCGCATTACGTACTTATCGATTACTTATCTTCGATGCCGGCCGGCATATGCCGCTTTAGCATCGATCGATCGTACTTTACGCGTATAGCCGCTTCGCTTGCCGTACGCGATGCTAGCATATGCTAGCGCTAATTACTTAT",
 #   9, 3)
